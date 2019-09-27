@@ -182,7 +182,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddPileRequest.cs" />
+    <Compile Include="Models\CardDrawnResponse.cs" />
+    <Compile Include="Models\CardDrawRequest.cs" />
+    <Compile Include="Models\CardInfo.cs" />
     <Compile Include="Models\DeckCreate.cs" />
+    <Compile Include="Models\PileInfo.cs" />
+    <Compile Include="Models\PileListResponse.cs" />
     <Compile Include="Models\ShortDeckInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
