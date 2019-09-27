@@ -70,11 +70,17 @@ namespace DeckOfCards.Controllers
             Pile pile = deck.Piles
                 .First(p => p.Name == pileName);
 
+            List<CardInfo> cards = deck.Cards
+             .Where(x => x.PileId == pile.Id)
+             .Select(x => new CardInfo { Suit = x.Suit, Value = x.Value, Code = x.Code })
+             .ToList();
+
             return new PileListResponse()
             {
                 DeckId = deck.DeckId,
                 Remaining = deck.Cards.Where(x => !x.Drawn).Count(),
-                Cards = pile.Cards
+                PileName = pile.Name,
+                Cards = cards
             };
         }
     }

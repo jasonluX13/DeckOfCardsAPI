@@ -10,6 +10,8 @@ namespace DeckOfCards.Models
     {
         public string DeckId { get; set; }
         public int Remaining { get; set; }
-        public IList<Card> Cards { get; set; }
+        public string PileName { get; set; }
+        public List<CardInfo> Cards { get; set; }
+ 
     }
 }
